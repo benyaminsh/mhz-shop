@@ -8,6 +8,7 @@ class CommentSerializers(serializers.ModelSerializer):
         fields = (
             'id',
             'full_name',
+            'mobile_number',
             'email',
             'body',
             'status',
@@ -16,6 +17,7 @@ class CommentSerializers(serializers.ModelSerializer):
         extra_kwargs = {
             'id': {'read_only': True},
             'full_name': {'read_only': True},
+            'mobile_number': {'read_only': True},
             'email': {'read_only': True},
             'body': {'read_only': True},
             'status': {'required': True},
