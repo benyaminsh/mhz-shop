@@ -1,0 +1,2919 @@
+{
+	"info": {
+		"_postman_id": "c7b2f3bb-a02b-403d-a292-4552aa218dcd",
+		"name": "mhz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16610578",
+		"_collection_link": "https://planetary-desert-983909.postman.co/workspace/Test~12f9120c-6fb4-4a18-b9dd-771f52556976/collection/16610578-c7b2f3bb-a02b-403d-a292-4552aa218dcd?action=share&source=collection_link&creator=16610578"
+	},
+	"item": [
+		{
+			"name": "products",
+			"item": [
+				{
+					"name": "list",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{version}}/products/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"products",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/products/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"products",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 24 Nov 2023 18:15:18 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Accept-Language"
+								},
+								{
+									"key": "Allow",
+									"value": "GET, HEAD, OPTIONS"
+								},
+								{
+									"key": "Content-Length",
+									"value": "270"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"title\": \"Side by Side\",\n            \"slug\": \"side-by-side\",\n            \"model\": \"lg\",\n            \"image\": \"http://127.0.0.1:8000/media/ProductImage/beni2.jpg\",\n            \"category\": {\n                \"id\": 1,\n                \"title\": \"yakhchal\"\n            },\n            \"created\": \"2023-11-24T17:51:37.605552Z\",\n            \"updated\": \"2023-11-24T17:56:00.512061Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "detail",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{url}}/api/{{version}}/products/retrieve/?pk=1",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"products",
+								"retrieve",
+								""
+							],
+							"query": [
+								{
+									"key": "pk",
+									"value": "1"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/products/retrieve/?pk=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"products",
+										"retrieve",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Date",
+									"value": "Fri, 24 Nov 2023 18:23:14 GMT"
+								},
+								{
+									"key": "Server",
+									"value": "WSGIServer/0.2 CPython/3.10.12"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Vary",
+									"value": "Accept, origin, Accept-Language"
+								},
+								{
+									"key": "Allow",
+									"value": "OPTIONS"
+								},
+								{
+									"key": "Content-Length",
+									"value": "737"
+								},
+								{
+									"key": "Content-Language",
+									"value": "en"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "DENY"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "same-origin"
+								},
+								{
+									"key": "Cross-Origin-Opener-Policy",
+									"value": "same-origin"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"title\": \"Side by Side\",\n    \"slug\": \"side-by-side\",\n    \"description\": \"jdjajjjjjaaodoaa\\r\\ndaooodso\\r\\nd\\r\\ndaod\",\n    \"model\": \"lg\",\n    \"image\": \"http://127.0.0.1:8000/media/ProductImage/beni2.jpg\",\n    \"category\": {\n        \"id\": 1,\n        \"title\": \"yakhchal\"\n    },\n    \"brand_en\": \"side\",\n    \"brand_fa\": \"ساید\",\n    \"status\": true,\n    \"created\": \"2023-11-24T17:51:37.605552Z\",\n    \"updated\": \"2023-11-24T17:56:00.512061Z\",\n    \"features\": [\n        {\n            \"id\": 1,\n            \"title\": \"size\",\n            \"description\": \"20\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"color\",\n            \"description\": \"red\"\n        }\n    ],\n    \"comments\": [\n        {\n            \"id\": 1,\n            \"full_name\": \"benyamin shokhoi\",\n            \"email\": \"benitekser@gmail.com\",\n            \"body\": \"عالی بود\",\n            \"created\": \"2023-11-24T18:22:56.422266Z\"\n        },\n        {\n            \"id\": 2,\n            \"full_name\": \"amir ali\",\n            \"email\": \"amir@gmail.com\",\n            \"body\": \"خیلی خوب بود\",\n            \"created\": \"2023-11-24T18:23:11.747414Z\"\n        }\n    ]\n}"
+						}
+					]
+				}
+			],
+			"description": "ای پی ای های بخش محصولات"
+		},
+		{
+			"name": "manager",
+			"item": [
+				{
+					"name": "products",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/product/list_create/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"product",
+										"list_create",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/product/list_create/",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"product",
+												"list_create",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 18:55:10 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "761"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"title\": \"Side by Side\",\n            \"slug\": \"side-by-side\",\n            \"description\": \"jdjajjjjjaaodoaa\\r\\ndaooodso\\r\\nd\\r\\ndaod\",\n            \"model\": \"lg\",\n            \"image\": \"http://127.0.0.1:8000/media/ProductImage/beni2.jpg\",\n            \"category\": {\n                \"id\": 1,\n                \"title\": \"yakhchal\"\n            },\n            \"brand_en\": \"side\",\n            \"brand_fa\": \"ساید\",\n            \"status\": true,\n            \"created\": \"2023-11-24T17:51:37.605552Z\",\n            \"updated\": \"2023-11-24T17:56:00.512061Z\",\n            \"features\": [\n                {\n                    \"id\": 1,\n                    \"title\": \"size\",\n                    \"description\": \"20\"\n                },\n                {\n                    \"id\": 2,\n                    \"title\": \"color\",\n                    \"description\": \"red\"\n                }\n            ],\n            \"comments\": [\n                {\n                    \"id\": 1,\n                    \"full_name\": \"benyamin shokhoi\",\n                    \"email\": \"benitekser@gmail.com\",\n                    \"body\": \"عالی بود\",\n                    \"created\": \"2023-11-24T18:22:56.422266Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"full_name\": \"amir ali\",\n                    \"email\": \"amir@gmail.com\",\n                    \"body\": \"خیلی خوب بود\",\n                    \"created\": \"2023-11-24T18:23:11.747414Z\"\n                }\n            ]\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "retrieve",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/product/retrieve_update_destroy/?pk=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"product",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/product/retrieve_update_destroy/?pk=1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"product",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 18:55:44 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "737"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"title\": \"Side by Side\",\n    \"slug\": \"side-by-side\",\n    \"description\": \"jdjajjjjjaaodoaa\\r\\ndaooodso\\r\\nd\\r\\ndaod\",\n    \"model\": \"lg\",\n    \"image\": \"http://127.0.0.1:8000/media/ProductImage/beni2.jpg\",\n    \"category\": {\n        \"id\": 1,\n        \"title\": \"yakhchal\"\n    },\n    \"brand_en\": \"side\",\n    \"brand_fa\": \"ساید\",\n    \"status\": true,\n    \"created\": \"2023-11-24T17:51:37.605552Z\",\n    \"updated\": \"2023-11-24T17:56:00.512061Z\",\n    \"features\": [\n        {\n            \"id\": 1,\n            \"title\": \"size\",\n            \"description\": \"20\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"color\",\n            \"description\": \"red\"\n        }\n    ],\n    \"comments\": [\n        {\n            \"id\": 1,\n            \"full_name\": \"benyamin shokhoi\",\n            \"email\": \"benitekser@gmail.com\",\n            \"body\": \"عالی بود\",\n            \"created\": \"2023-11-24T18:22:56.422266Z\"\n        },\n        {\n            \"id\": 2,\n            \"full_name\": \"amir ali\",\n            \"email\": \"amir@gmail.com\",\n            \"body\": \"خیلی خوب بود\",\n            \"created\": \"2023-11-24T18:23:11.747414Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "xx",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/product/retrieve_update_destroy/?pk=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"product",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "xx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/product/retrieve_update_destroy/?pk=1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"product",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 18:59:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "718"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"title\": \"xx\",\n    \"slug\": \"xx\",\n    \"description\": \"jdjajjjjjaaodoaa\\r\\ndaooodso\\r\\nd\\r\\ndaod\",\n    \"model\": \"lg\",\n    \"image\": \"http://127.0.0.1:8000/media/ProductImage/beni2.jpg\",\n    \"category\": {\n        \"id\": 1,\n        \"title\": \"yakhchal\"\n    },\n    \"brand_en\": \"side\",\n    \"brand_fa\": \"ساید\",\n    \"status\": false,\n    \"created\": \"2023-11-24T17:51:37.605552Z\",\n    \"updated\": \"2023-11-24T18:59:57.305996Z\",\n    \"features\": [\n        {\n            \"id\": 1,\n            \"title\": \"size\",\n            \"description\": \"20\"\n        },\n        {\n            \"id\": 2,\n            \"title\": \"color\",\n            \"description\": \"red\"\n        }\n    ],\n    \"comments\": [\n        {\n            \"id\": 1,\n            \"full_name\": \"benyamin shokhoi\",\n            \"email\": \"benitekser@gmail.com\",\n            \"body\": \"عالی بود\",\n            \"created\": \"2023-11-24T18:22:56.422266Z\"\n        },\n        {\n            \"id\": 2,\n            \"full_name\": \"amir ali\",\n            \"email\": \"amir@gmail.com\",\n            \"body\": \"خیلی خوب بود\",\n            \"created\": \"2023-11-24T18:23:11.747414Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "xx",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "jdjdjdjd",
+											"type": "text"
+										},
+										{
+											"key": "model",
+											"value": "dkkdd",
+											"type": "text"
+										},
+										{
+											"key": "image",
+											"type": "file",
+											"src": "/home/lenovo/Pictures/b.jpeg"
+										},
+										{
+											"key": "brand_fa",
+											"value": "ss",
+											"type": "text"
+										},
+										{
+											"key": "brand_en",
+											"value": "od",
+											"type": "text"
+										},
+										{
+											"key": "category",
+											"value": "1",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/product/list_create/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"product",
+										"list_create",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "xx",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "jdjdjdjd",
+													"type": "text"
+												},
+												{
+													"key": "model",
+													"value": "dkkdd",
+													"type": "text"
+												},
+												{
+													"key": "image",
+													"type": "file",
+													"src": "/home/lenovo/Pictures/b.jpeg"
+												},
+												{
+													"key": "brand_fa",
+													"value": "ss",
+													"type": "text"
+												},
+												{
+													"key": "brand_en",
+													"value": "od",
+													"type": "text"
+												},
+												{
+													"key": "category",
+													"value": "1",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/product/list_create/",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"product",
+												"list_create",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:04:15 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "339"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"xx\",\n    \"slug\": \"xx\",\n    \"description\": \"jdjdjdjd\",\n    \"model\": \"dkkdd\",\n    \"image\": \"http://127.0.0.1:8000/media/ProductImage/b_IPlVaBE.jpeg\",\n    \"brand_en\": \"od\",\n    \"brand_fa\": \"ss\",\n    \"status\": false,\n    \"created\": \"2023-11-24T19:04:15.250451Z\",\n    \"updated\": \"2023-11-24T19:04:15.250502Z\",\n    \"category_info\": {\n        \"id\": 1,\n        \"title\": \"yakhchal\"\n    },\n    \"features\": [],\n    \"comments\": []\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/product/retrieve_update_destroy/?pk=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"product",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/product/retrieve_update_destroy/?pk=2",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"product",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:06:21 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "21"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"xx\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "category",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/category/list_create/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"category",
+										"list_create",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/category/list_create/",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"category",
+												"list_create",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:15:08 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "51"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"id\": 1,\n            \"title\": \"yakhchal\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "retrieve",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/category/retrieve_update_destroy/?pk=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"category",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/category/retrieve_update_destroy/?pk=1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"category",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:15:24 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "27"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"title\": \"yakhchal\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "Mashin",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/category/retrieve_update_destroy/?pk=1",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"category",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "1"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "Mashin",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/category/retrieve_update_destroy/?pk=1",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"category",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "1"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:15:46 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "25"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 1,\n    \"title\": \"Mashin\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "xx",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/category/list_create/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"category",
+										"list_create",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "xx",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/category/list_create/",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"category",
+												"list_create",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:15:58 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "21"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"xx\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/category/retrieve_update_destroy/?pk=2",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"category",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "2"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/category/retrieve_update_destroy/?pk=2",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"category",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "2"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:16:17 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "21"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 2,\n    \"title\": \"xx\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "feature",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/feature/list_create/?productID=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"feature",
+										"list_create",
+										""
+									],
+									"query": [
+										{
+											"key": "productID",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/feature/list_create/?productID=3",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"feature",
+												"list_create",
+												""
+											],
+											"query": [
+												{
+													"key": "productID",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:30:22 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "118"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"title\": \"test\",\n            \"description\": \"tkwsodo\"\n        },\n        {\n            \"id\": 4,\n            \"title\": \"eejje\",\n            \"description\": \"eyeys\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "retrieve",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/feature/retrieve_update_destroy/?pk=4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"feature",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/feature/retrieve_update_destroy/?pk=4",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"feature",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:30:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "46"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"title\": \"eejje\",\n    \"description\": \"eyeys\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "size",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/feature/retrieve_update_destroy/?pk=4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"feature",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "size",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/feature/retrieve_update_destroy/?pk=4",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"feature",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:32:24 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "45"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"title\": \"size\",\n    \"description\": \"eyeys\"\n}"
+								}
+							]
+						},
+						{
+							"name": "create",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "title",
+											"value": "xx",
+											"type": "text"
+										},
+										{
+											"key": "description",
+											"value": "kdkdk",
+											"type": "text"
+										},
+										{
+											"key": "product",
+											"value": "3",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/feature/list_create/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"feature",
+										"list_create",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "title",
+													"value": "xx",
+													"type": "text"
+												},
+												{
+													"key": "description",
+													"value": "kdkdk",
+													"type": "text"
+												},
+												{
+													"key": "product",
+													"value": "3",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/feature/list_create/",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"feature",
+												"list_create",
+												""
+											]
+										}
+									},
+									"status": "Created",
+									"code": 201,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:34:49 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, POST, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "55"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 5,\n    \"product\": 3,\n    \"title\": \"xx\",\n    \"description\": \"kdkdk\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/feature/retrieve_update_destroy/?pk=4",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"feature",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "4"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/feature/retrieve_update_destroy/?pk=4",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"feature",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "4"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:35:04 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "23"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 4,\n    \"title\": \"size\"\n}"
+								}
+							]
+						}
+					]
+				},
+				{
+					"name": "comment",
+					"item": [
+						{
+							"name": "list",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/comment/list/",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"comment",
+										"list",
+										""
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/comment/list/",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"comment",
+												"list",
+												""
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:43:17 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "GET, HEAD, OPTIONS"
+										},
+										{
+											"key": "Content-Length",
+											"value": "133"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"total\": 1,\n    \"results\": [\n        {\n            \"id\": 3,\n            \"full_name\": \"sjsj\",\n            \"email\": \"example@gmail.com\",\n            \"body\": \"sjjs\",\n            \"created\": \"2023-11-24T19:43:14.620102Z\"\n        }\n    ]\n}"
+								}
+							]
+						},
+						{
+							"name": "retrieve",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/comment/retrieve_update_destroy/?pk=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"comment",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "GET",
+										"header": [],
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/comment/retrieve_update_destroy/?pk=3",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"comment",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:43:38 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "109"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"full_name\": \"sjsj\",\n    \"email\": \"example@gmail.com\",\n    \"body\": \"sjjs\",\n    \"created\": \"2023-11-24T19:43:14.620102Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "update",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": [
+										{
+											"key": "status",
+											"value": "False",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/comment/retrieve_update_destroy/?pk=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"comment",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "PUT",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": [
+												{
+													"key": "status",
+													"value": "False",
+													"type": "text"
+												}
+											]
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/comment/retrieve_update_destroy/?pk=3",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"comment",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:46:35 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "124"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"full_name\": \"sjsj\",\n    \"email\": \"example@gmail.com\",\n    \"body\": \"sjjs\",\n    \"status\": false,\n    \"created\": \"2023-11-24T19:43:14.620102Z\"\n}"
+								}
+							]
+						},
+						{
+							"name": "delete",
+							"request": {
+								"auth": {
+									"type": "apikey",
+									"apikey": [
+										{
+											"key": "value",
+											"value": "Token {{token}}",
+											"type": "string"
+										},
+										{
+											"key": "key",
+											"value": "Authorization",
+											"type": "string"
+										}
+									]
+								},
+								"method": "DELETE",
+								"header": [],
+								"body": {
+									"mode": "formdata",
+									"formdata": []
+								},
+								"url": {
+									"raw": "{{url}}/api/{{version}}/managers/comment/retrieve_update_destroy/?pk=3",
+									"host": [
+										"{{url}}"
+									],
+									"path": [
+										"api",
+										"{{version}}",
+										"managers",
+										"comment",
+										"retrieve_update_destroy",
+										""
+									],
+									"query": [
+										{
+											"key": "pk",
+											"value": "3"
+										}
+									]
+								}
+							},
+							"response": [
+								{
+									"name": "success",
+									"originalRequest": {
+										"method": "DELETE",
+										"header": [],
+										"body": {
+											"mode": "formdata",
+											"formdata": []
+										},
+										"url": {
+											"raw": "{{url}}/api/{{version}}/managers/comment/retrieve_update_destroy/?pk=3",
+											"host": [
+												"{{url}}"
+											],
+											"path": [
+												"api",
+												"{{version}}",
+												"managers",
+												"comment",
+												"retrieve_update_destroy",
+												""
+											],
+											"query": [
+												{
+													"key": "pk",
+													"value": "3"
+												}
+											]
+										}
+									},
+									"status": "OK",
+									"code": 200,
+									"_postman_previewlanguage": "json",
+									"header": [
+										{
+											"key": "Date",
+											"value": "Fri, 24 Nov 2023 19:47:57 GMT"
+										},
+										{
+											"key": "Server",
+											"value": "WSGIServer/0.2 CPython/3.10.12"
+										},
+										{
+											"key": "Content-Type",
+											"value": "application/json"
+										},
+										{
+											"key": "Vary",
+											"value": "Accept, origin, Accept-Language"
+										},
+										{
+											"key": "Allow",
+											"value": "OPTIONS, PUT, DELETE"
+										},
+										{
+											"key": "Content-Length",
+											"value": "22"
+										},
+										{
+											"key": "Content-Language",
+											"value": "en"
+										},
+										{
+											"key": "X-Frame-Options",
+											"value": "DENY"
+										},
+										{
+											"key": "X-Content-Type-Options",
+											"value": "nosniff"
+										},
+										{
+											"key": "Referrer-Policy",
+											"value": "same-origin"
+										},
+										{
+											"key": "Cross-Origin-Opener-Policy",
+											"value": "same-origin"
+										}
+									],
+									"cookie": [],
+									"body": "{\n    \"id\": 3,\n    \"body\": \"sjjs\"\n}"
+								}
+							]
+						}
+					]
+				}
+			],
+			"description": "ای پی ای های مدیر وب سایت\""
+		},
+		{
+			"name": "create comment",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "full_name",
+							"value": "benyamin sh",
+							"type": "text"
+						},
+						{
+							"key": "email",
+							"value": "beni@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "Awli bod",
+							"type": "text"
+						},
+						{
+							"key": "product",
+							"value": "3",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{url}}/api/{{version}}/products/comment/create/",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"api",
+						"{{version}}",
+						"products",
+						"comment",
+						"create",
+						""
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "success",
+					"originalRequest": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "full_name",
+									"value": "benyamin sh",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "beni@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "body",
+									"value": "Awli bod",
+									"type": "text"
+								},
+								{
+									"key": "product",
+									"value": "3",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{url}}/api/{{version}}/products/comment/create/",
+							"host": [
+								"{{url}}"
+							],
+							"path": [
+								"api",
+								"{{version}}",
+								"products",
+								"comment",
+								"create",
+								""
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Date",
+							"value": "Fri, 24 Nov 2023 19:56:18 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "WSGIServer/0.2 CPython/3.10.12"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Vary",
+							"value": "Accept, origin, Accept-Language"
+						},
+						{
+							"key": "Allow",
+							"value": "POST, OPTIONS"
+						},
+						{
+							"key": "Content-Length",
+							"value": "132"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "Referrer-Policy",
+							"value": "same-origin"
+						},
+						{
+							"key": "Cross-Origin-Opener-Policy",
+							"value": "same-origin"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"id\": 4,\n    \"full_name\": \"benyamin sh\",\n    \"email\": \"beni@gmail.com\",\n    \"body\": \"Awli bod\",\n    \"status\": false,\n    \"created\": \"2023-11-24T19:56:18.729740Z\"\n}"
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "url",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "token",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "version",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
