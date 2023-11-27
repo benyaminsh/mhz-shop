@@ -3,11 +3,12 @@ from django.urls import path, include
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib.staticfiles.urls import staticfiles_urlpatterns
+from rest_framework.authtoken import views
 
 v1_urlpatterns = [
     path('products/', include('app_products.api.urls', namespace='app_products')),
     path('managers/', include('app_managers.api.urls', namespace='app_managers')),
-
+    path('api-token-auth/', views.obtain_auth_token)
 ]
 
 urlpatterns = [
